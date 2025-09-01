@@ -2,11 +2,36 @@
 
 
 @theme {
-  --color-qs-orange-500: oklch(70.5% 0.213 47.604);
-  --color-qs-orange-400: #3ab7bf;
-  --color-qs-orange-gradiant: #78dcca;
-  --color-qs-white-gradiant: #78dcca;
-  --color-qs-neutral-500: #78dcca;
-  --color-qs-neutral-50: #78dcca;
-  --color-qs-white-white: #78dcca;
+  /* palette color */
+  --color-qs-palette-orange-500: oklch(70.5% 0.213 47.604);
+  --color-qs-palette-orange-400: oklch(75% 0.183 55.934);
+  --color-qs-palette-neutral-500: oklch(55.6% 0 0);
+  --color-qs-palette-neutral-50: oklch(98.5% 0 0);
+  /* TEXT color */
+  --color-qs-text-neutral-700: oklch(37.1% 0 0);
+  --color-qs-text-neutral-500: oklch(55.2% 0.016 285.938);
+  /* boxcolor */
+  --color-qs-boxcolor-neutral-800: oklch(26.9% 0 0);
+  --color-qs-boxcolor-neutral-800: oklch(98.5% 0 0);
+  --color-qs-boxcolor-neutral-800: oklch(98% 0.016 73.684);
+
+  
+}
+@font-face {
+  font-family: "sahel-regular";
+  src: url(../../public/fonts/Sahel-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "sahel-bold";
+  src: url(../../public/fonts/Sahel-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "sahel-semiBold";
+  src: url(../../public/fonts/Sahel-SemiBold.ttf) format("truetype");
+}
+
+@theme {
+  --font-sahel-regular: "sahel-regular";
+  --font-sahel-bold: "Sahel-Bold", sans-serif;
+  --font-sahel-semiBold: "Sahel-SemiBold", sans-serif;
 }

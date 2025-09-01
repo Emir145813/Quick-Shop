@@ -2,7 +2,7 @@ function Home() {
   return (
   <div>
     <p>
-      This is Home Page
+      صفحه اصلی
     </p>
   </div>
   );
