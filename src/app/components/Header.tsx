@@ -12,7 +12,7 @@ function Header() {
         className="w-full h-[920px] object-cover"
       />
       <div className='w-[90%] h-[920px] m-auto absolute inset-0 grid grid-cols-2 justify-center items-center'>
-        <div className='h-full flex flex-col justify-center st'>
+        <div className='h-full flex flex-col justify-center gap-3'>
           <h1 className='font-sahel-bold text-[48px] weight-[700] text-white'>
             تجربه راحت ترین خرید با کویک شاپ
           </h1>
