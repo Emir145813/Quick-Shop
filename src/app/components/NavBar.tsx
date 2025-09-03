@@ -5,6 +5,9 @@ import Shop_logo from "../../../public/svgs/NavBar/Shop"
 import AboutUS_logo from "../../../public/svgs/NavBar/AboutUS"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import Quick_Shop from "../../../public/svgs/NavBar/Quick_Shop"
+import Profile_Tick from "../../../public/svgs/NavBar/Profile_Tick"
+import Shoping_Cart from "../../../public/svgs/NavBar/Shoping_Cart"
 
 
 function NavBar() {
@@ -20,29 +23,36 @@ function NavBar() {
 
 
   return (
-    <div className="bg-yellow-500 font-sahel-regular h-[126px]">
-      <div className="w-[90%] m-auto flex">
-        <div>
-          <ul className="flex gap-4">
-            {navItems.map((item)=>(
-              <li key={item.name}>
-                <Link className="bg-amber-800 flex justify-center items-center border-2 border-green-300" href ={item.href}>
-                  {item.icon}
-                  <span className={pathName === item.href ? "text-orange-500 text-[20px]" : "text-white text-[20px]"}>
-                    {item.name}
-                  </span>
-                </Link>
+    <div className="bg-linear-to-b from-black to-[#00000000] font-sahel-regular h-[126px] relative flex items-end justify-end">
+      <div className="border-b-[1.33px] border-[#737373] w-[92%] h-[100%] m-auto flex justify-center items-center ">
+        <div className="w-[90%] h-[50%] m-auto flex justify-between items-end absolute">
+          <div className="flex justify-center items-center">
+            <ul className="flex gap-5">
+              {navItems.map((item)=>(
+                <li key={item.name}>
+                  <Link className=" flex justify-center items-center gap-1 " href ={item.href}>
+                    {item.icon}
+                    <span className={pathName === item.href ? "text-orange-500 text-[20px]" : "text-white text-[20px] "}>
+                      {item.name}
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+              <Quick_Shop/>
+          </div>
+          <div>
+            <ul className="flex gap-2.5 justify-left items-center">
+              <li className="w-[47.7px] h-[47.7px] flex justify-center items-center border-[1.33px] border-[#737373] rounded-[15.91px] ">
+                <Link href='/'><Shoping_Cart/></Link>
               </li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <span>
-            logo
-          </span>
-        </div>
-        <div>
-
+              <li className="w-[47.px]">
+                <Link href='/'><Profile_Tick/></Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

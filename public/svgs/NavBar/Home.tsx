@@ -3,6 +3,7 @@ import * as React from "react"
 type TSvg = {
   props ?: React.SVGProps<SVGSVGElement>
   color ?: string
+  className ?: string
 }
 
 
