@@ -8,9 +8,7 @@ type IChildren ={
 function Layout({ children }: IChildren) {
   return (
     <div>
-      <div className="absolute w-full z-10">
-      <NavBar/>
-      </div>
+      <NavBar/>    
       {children}
     </div>
   )

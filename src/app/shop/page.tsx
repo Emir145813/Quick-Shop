@@ -2,7 +2,10 @@ import React from 'react'
 
 function Shop() {
   return (
-    <div>Shop</div>
+    <div className='absolute'>
+      <div className='h-[543px] w-[400px] bg-black rounded-[24px]'>
+      </div>
+    </div>
   )
 }
 

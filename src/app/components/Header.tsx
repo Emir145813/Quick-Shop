@@ -3,7 +3,7 @@ import React from 'react'
 
 function Header() {
   return (
-    <div className='relative w-full h-full'>
+    <div className="relative w-full h-full">
       <Image
         src="/img/Hero.jpg"
         alt="Hero Image"
