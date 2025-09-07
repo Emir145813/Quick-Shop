@@ -58,6 +58,10 @@ function NavBar() {
         </div>
       </div>
       <hr className="w-[92%] mx-auto text-white border-[1.33px] rounded-2xl border-[#737373] h-[1.33px]" />
+
+
+      
+
     </div>
   )
 }
