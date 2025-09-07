@@ -1,11 +1,20 @@
 import React from 'react'
+import Product from '../components/Product'
+import Container from '../components/Container'
 
 function Shop() {
   return (
-    <div className='absolute'>
-      <div className='h-[543px] w-[400px] bg-black rounded-[24px]'>
+    <Container>
+      <div className='grid grid-cols-4 bg-[#FAFAFA] p-[20px] gap-[24px] rounded-[24px]' >
+        <Product/>
+        <Product/>
+        <Product/>
+        <Product/>
+        <Product/>
+        <Product/>
+        <Product/>
       </div>
-    </div>
+    </Container>
   )
 }
 
