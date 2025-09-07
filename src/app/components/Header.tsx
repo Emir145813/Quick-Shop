@@ -27,7 +27,16 @@ function Header() {
         </div>
       </div>
       <div className='absolute w-full bottom-0 translate-y-10'>
-        <Header_Wave/>
+        <svg className="w-full h-full" viewBox="0 0 1920 194" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <mask id="mask0_241_2119" maskUnits="userSpaceOnUse" x="-5" y="0">
+          <path d="M-0.434204 60.9999C-0.434204 60.9999 404.126 141.465 953.077 141.465C1502.03 141.465 1918.57 60.9999 1918.57 60.9999V194H-0.434204V60.9999Z" fill="white"/>
+          <path d="M-1.43665 0.897095C-1.43665 0.897095 401.883 92.4746 952.077 107.3C1502.27 122.126 1921.91 52.7234 1921.91 52.7234L1918.34 186.032L-4.99997 134.206L-1.43665 0.897095Z" fill="white" fillOpacity="0.6"/>
+          <path d="M-2.70947 29.1759C-2.70947 29.1759 402.011 115.744 952.757 123.745C1503.5 131.746 1922.57 57.1448 1922.57 57.1448L1920.64 190.487L-4.63103 162.518L-2.70947 29.1759Z" fill="white" fillOpacity="0.6"/>
+          </mask>
+          <g mask="url(#mask0_241_2119)">
+          <rect x="-0.434326" y="-3.00003" width="1920" height="179" fill="white"/>
+          </g>
+        </svg>
       </div>
     </div>
   )
