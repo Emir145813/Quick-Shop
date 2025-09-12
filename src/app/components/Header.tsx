@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import React from 'react'
-import Header_Wave from '../../../public/svgs/Header/Header_Wave'
 
 function Header() {
   return (
@@ -10,6 +9,7 @@ function Header() {
           <Image
             src="/img/Hero.jpg"
             alt="Hero Image"
+            priority={false}
             width={1920}
             height={1080}
             className="w-full h-full object-cover relative"
