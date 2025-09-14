@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "کفش اسپرت پسرانه بهمن",
-      "price": 19.99,
+      "price": "415,000" ,
       "image_src": "/img/products/image_1.png",
       "description": "This is a great product.",
       "pclass" : "کفش- اسپرت"
@@ -11,7 +11,7 @@
     {
       "id": 2,
       "title": "کیف کلاسیک مهرخ",
-      "price": 29.99,
+      "price": "415,000",
       "image_src": "/img/products/image_2.png",
       "description": "This is another great product.",
       "pclass" : "کیف- کلاسیک"
@@ -19,7 +19,7 @@
     {
       "id": 3,
       "title": "بوت گیسو",
-      "price": 39.99,
+      "price": "415,000",
       "image_src": "/img/products/image_3.png",
       "description": "You will love this product.",
       "pclass" : "کفش- بوت"
@@ -27,7 +27,7 @@
     {
       "id": 4,
       "title": "کیف دوشی گلرخ",
-      "price": 49.99,
+      "price": "415,000",
       "image_src": "/img/products/image_4.png",
       "description": "Best product in the market.",
       "pclass" : "کیف- دوشی"
@@ -35,7 +35,7 @@
     {
       "id": 5,
       "title": "کفش مجلسی سیندرلا",
-      "price": 49.99,
+      "price": "415,000",
       "image_src": "/img/products/image_5.png",
       "description": "Best product in the market.",
       "pclass" : ""
@@ -43,7 +43,7 @@
     {
       "id": 6,
       "title": "ست مجلسی کیف پول و دوشی مهرو",
-      "price": 49.99,
+      "price": "415,000",
       "image_src": "/img/products/image_6.png",
       "description": "Best product in the market.",
       "pclass" : "کفش- مجلسی"
@@ -51,7 +51,7 @@
     {
       "id": 7,
       "title": "کیف کلاسیک ابیرو",
-      "price": 49.99,
+      "price": "415,000",
       "image_src": "/img/products/image_7.png",
       "description": "Best product in the market.",
       "pclass" : "کیف- کلاسیک"
@@ -59,7 +59,7 @@
     {
       "id": 8,
       "title": "کفش مجلسی رعنا",
-      "price": 49.99,
+      "price": "415,000",
       "image_src": "/img/products/image_8.png",
       "description": "Best product in the market.",
       "pclass" : "کیف- مجلسی"
@@ -67,7 +67,7 @@
     {
       "id": 9,
       "title": "کیف پول آتنا",
-      "price": 49.99,
+      "price": "415,000",
       "image_src": "/img/products/image_9.png",
       "description": "Best product in the market.",
       "pclass" : "کیف- کیف پول"
@@ -75,7 +75,7 @@
     {
       "id": 10,
       "title": "صندل هرمز",
-      "price": 49.99,
+      "price": "415,000",
       "image_src": "/img/products/image_10.png",
       "description": "Best product in the market.",
       "pclass" : "کفش- صندل"
@@ -83,7 +83,7 @@
     {
       "id": 11,
       "title": "کفش مجلسی لاله",
-      "price": 49.99,
+      "price": "415,000",
       "image_src": "/img/products/image_11.png",
       "description": "Best product in the market.",
       "pclass" : "کفش- مجلسی"
