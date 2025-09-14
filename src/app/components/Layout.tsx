@@ -1,7 +1,7 @@
 import React from "react"
 import NavBar from "./NavBar"
 
-type IChildren ={
+export type IChildren ={
   children : React.ReactNode
 }
 

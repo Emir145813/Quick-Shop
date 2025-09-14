@@ -1,20 +1,28 @@
 import React from 'react'
+import Image from 'next/image'
+import { IProduct } from '../shop/page'
 
-function Product() {
+
+function Product({image_src,title,pclass}: IProduct) {
   return (
     <div className='h-[543px] w-[400px] bg-white rounded-[24px] p-[21px]'>
       <div className='w-[359px] h-[302.86px] bg-amber-300 rounded-[16.66px] mb-[23.13]'>
-        {/* image */}
+        <Image
+          src={`${image_src}`}
+          alt='Product Image'
+          width={359}
+          height={302.87}
+        />
       </div>
       <div>
         <p className='font-sahel-semiBold text-[24px] text-[#404040] bg-amber-400 mb-[24px]'>
-          بوت گیسو
+          {title}
         </p>
         <div className='flex mb-[29.5px]'>
           <div className='ml-[7.02px] text-[22px] '>[--]</div>
           <div>
             <p className='font-sahel-regular text-[#737373] text-[22px]'>
-              کفش- بوت
+              {pclass}
             </p>
           </div>
         </div>
