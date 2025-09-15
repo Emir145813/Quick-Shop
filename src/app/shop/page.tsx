@@ -14,6 +14,13 @@ export interface IProduct {
   rating ?: {
     rate ?: number ,
     count ?: number
+  },
+  specs ?: {
+    spec: {
+      id : number
+      key: string,
+      value: string
+    }[]
   }
 }
 
@@ -24,7 +31,7 @@ async function Shop() {
 
   return (
     <Container>
-      <div className='grid grid-cols-4 bg-[#FAFAFA] p-[20px] my-[54px] gap-[24px] rounded-[24px]' >
+      <div className='grid grid-cols-4 bg-[#FAFAFA] shadow-[0px_0px_8px_2px_rgba(0,_0,_0,_0.1)] p-[20px] my-[54px] gap-[24px] rounded-[24px]' >
         {PInfo.map((product : IProduct) => (
           <Link key={product.id} href={`/shop/${product.id}`} >
             <Product title={product.title} image_src={product.image_src} pclass={product.pclass} price={product.price}/>

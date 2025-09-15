@@ -5,7 +5,25 @@
       "title": "کفش اسپرت پسرانه بهمن",
       "price": "415,000" ,
       "image_src": "/img/products/image_1.png",
-      "description": "This is a great product.",
+      "specs": {
+        "spec" : [
+          {
+            "id" : 1,
+            "key" : "سایز",
+            "value" : "35"
+          },
+          {
+            "id" : 2,
+            "key" : "جنس",
+            "value" : "چرم"
+          },
+          {
+            "id" : 3,
+            "key" : "زیره",
+            "value" : "pu"
+          }
+        ]
+      },
       "pclass" : "کفش- اسپرت"
     },
     {
@@ -13,7 +31,25 @@
       "title": "کیف کلاسیک مهرخ",
       "price": "415,000",
       "image_src": "/img/products/image_2.png",
-      "description": "This is another great product.",
+      "specs": {
+        "spec" : [
+          {
+            "id" : 1,
+            "key" : "سایز",
+            "value" : "35"
+          },
+          {
+            "id" : 2,
+            "key" : "جنس",
+            "value" : "چرم"
+          },
+          {
+            "id" : 3,
+            "key" : "زیره",
+            "value" : "pu"
+          }
+        ]
+      },
       "pclass" : "کیف- کلاسیک"
     },
     {
@@ -21,7 +57,25 @@
       "title": "بوت گیسو",
       "price": "415,000",
       "image_src": "/img/products/image_3.png",
-      "description": "You will love this product.",
+      "specs": {
+        "spec" : [
+          {
+            "id" : 1,
+            "key" : "سایز",
+            "value" : "35"
+          },
+          {
+            "id" : 2,
+            "key" : "جنس",
+            "value" : "چرم"
+          },
+          {
+            "id" : 3,
+            "key" : "زیره",
+            "value" : "pu"
+          }
+        ]
+      },
       "pclass" : "کفش- بوت"
     },
     {
@@ -29,7 +83,25 @@
       "title": "کیف دوشی گلرخ",
       "price": "415,000",
       "image_src": "/img/products/image_4.png",
-      "description": "Best product in the market.",
+      "specs": {
+        "spec" : [
+          {
+            "id" : 1,
+            "key" : "سایز",
+            "value" : "35"
+          },
+          {
+            "id" : 2,
+            "key" : "جنس",
+            "value" : "چرم"
+          },
+          {
+            "id" : 3,
+            "key" : "زیره",
+            "value" : "pu"
+          }
+        ]
+      },
       "pclass" : "کیف- دوشی"
     },
     {
@@ -37,7 +109,25 @@
       "title": "کفش مجلسی سیندرلا",
       "price": "415,000",
       "image_src": "/img/products/image_5.png",
-      "description": "Best product in the market.",
+      "specs": {
+        "spec" : [
+          {
+            "id" : 1,
+            "key" : "سایز",
+            "value" : "35"
+          },
+          {
+            "id" : 2,
+            "key" : "جنس",
+            "value" : "چرم"
+          },
+          {
+            "id" : 3,
+            "key" : "زیره",
+            "value" : "pu"
+          }
+        ]
+      },
       "pclass" : ""
     },
     {
@@ -45,7 +135,25 @@
       "title": "ست مجلسی کیف پول و دوشی مهرو",
       "price": "415,000",
       "image_src": "/img/products/image_6.png",
-      "description": "Best product in the market.",
+      "specs": {
+        "spec" : [
+          {
+            "id" : 1,
+            "key" : "سایز",
+            "value" : "35"
+          },
+          {
+            "id" : 2,
+            "key" : "جنس",
+            "value" : "چرم"
+          },
+          {
+            "id" : 3,
+            "key" : "زیره",
+            "value" : "pu"
+          }
+        ]
+      },
       "pclass" : "کفش- مجلسی"
     },
     {
@@ -53,7 +161,25 @@
       "title": "کیف کلاسیک ابیرو",
       "price": "415,000",
       "image_src": "/img/products/image_7.png",
-      "description": "Best product in the market.",
+      "specs": {
+        "spec" : [
+          {
+            "id" : 1,
+            "key" : "سایز",
+            "value" : "35"
+          },
+          {
+            "id" : 2,
+            "key" : "جنس",
+            "value" : "چرم"
+          },
+          {
+            "id" : 3,
+            "key" : "زیره",
+            "value" : "pu"
+          }
+        ]
+      },
       "pclass" : "کیف- کلاسیک"
     },
     {
@@ -61,7 +187,25 @@
       "title": "کفش مجلسی رعنا",
       "price": "415,000",
       "image_src": "/img/products/image_8.png",
-      "description": "Best product in the market.",
+      "specs": {
+        "spec" : [
+          {
+            "id" : 1,
+            "key" : "سایز",
+            "value" : "35"
+          },
+          {
+            "id" : 2,
+            "key" : "جنس",
+            "value" : "چرم"
+          },
+          {
+            "id" : 3,
+            "key" : "زیره",
+            "value" : "pu"
+          }
+        ]
+      },
       "pclass" : "کیف- مجلسی"
     },
     {
@@ -69,7 +213,25 @@
       "title": "کیف پول آتنا",
       "price": "415,000",
       "image_src": "/img/products/image_9.png",
-      "description": "Best product in the market.",
+      "specs": {
+        "spec" : [
+          {
+            "id" : 1,
+            "key" : "سایز",
+            "value" : "35"
+          },
+          {
+            "id" : 2,
+            "key" : "جنس",
+            "value" : "چرم"
+          },
+          {
+            "id" : 3,
+            "key" : "زیره",
+            "value" : "pu"
+          }
+        ]
+      },
       "pclass" : "کیف- کیف پول"
     },
     {
@@ -77,7 +239,25 @@
       "title": "صندل هرمز",
       "price": "415,000",
       "image_src": "/img/products/image_10.png",
-      "description": "Best product in the market.",
+      "specs": {
+        "spec" : [
+          {
+            "id" : 1,
+            "key" : "سایز",
+            "value" : "35"
+          },
+          {
+            "id" : 2,
+            "key" : "جنس",
+            "value" : "چرم"
+          },
+          {
+            "id" : 3,
+            "key" : "زیره",
+            "value" : "pu"
+          }
+        ]
+      },
       "pclass" : "کفش- صندل"
     },
     {
@@ -85,7 +265,25 @@
       "title": "کفش مجلسی لاله",
       "price": "415,000",
       "image_src": "/img/products/image_11.png",
-      "description": "Best product in the market.",
+      "specs": {
+        "spec" : [
+          {
+            "id" : 1,
+            "key" : "سایز",
+            "value" : "35"
+          },
+          {
+            "id" : 2,
+            "key" : "جنس",
+            "value" : "چرم"
+          },
+          {
+            "id" : 3,
+            "key" : "زیره",
+            "value" : "pu"
+          }
+        ]
+      },
       "pclass" : "کفش- مجلسی"
     }
   ]

@@ -8,8 +8,8 @@ import Cart_Btn_2 from '../../../public/svgs/Products/Cart_Btn_2'
 
 function Product({image_src,title,pclass,price}: IProduct) {
   return (
-    <div className='h-[543px] w-[400px] bg-white rounded-[24px] p-[21px]'>
-      <div className='w-[359px] h-[302.86px] bg-amber-300 rounded-[16.66px] mb-[23.13]'>
+    <div className='h-[543px] w-[400px] bg-white border-[1.33px] border-white rounded-[24px] p-[21px] hover:border-[1.33px] hover:border-orange-500 hover:transition hover:duration-150'>
+      <div className='w-[359px] h-[302.86px] rounded-[16.66px] mb-[23.13]'>
         <Image
           src={`${image_src}`}
           alt='Product Image'
@@ -18,15 +18,15 @@ function Product({image_src,title,pclass,price}: IProduct) {
         />
       </div>
       <div>
-        <p className='font-sahel-semiBold text-[24px] text-[#404040] bg-amber-400 mb-[24px]'>
+        <p className='font-sahel-semiBold text-[24px] text-[#404040] mb-[24px]'>
           {title}
         </p>
-        <div className='flex mb-[29.5px] bg-amber-200'>
-          <div className='ml-[7.02px] text-[22px] bg-amber-300 flex items-center justify-center'>
+        <div className='flex mb-[29.5px]'>
+          <div className='ml-[7.02px] text-[22px] flex items-center justify-center'>
             <Classification/>
           </div>
           <div>
-            <p className='font-sahel-regular text-[#737373] text-[22px] bg-amber-400'>
+            <p className='font-sahel-regular text-[#737373] text-[22px]'>
               {pclass}
             </p>
           </div>
