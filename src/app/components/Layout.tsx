@@ -1,5 +1,6 @@
 import React from "react"
 import NavBar from "./NavBar"
+import Footer from "./Footer"
 
 export type IChildren ={
   children : React.ReactNode
@@ -10,6 +11,7 @@ function Layout({ children }: IChildren) {
     <div>
       <NavBar/>    
       {children}
+      <Footer/>
     </div>
   )
 }
