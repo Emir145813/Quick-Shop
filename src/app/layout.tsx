@@ -16,7 +16,6 @@ export default function RootLayout({
   return (
     <html lang="fa" dir="rtl">
       <body>
-
           <CartPageContextProvider>
             <Layout>
               {children}

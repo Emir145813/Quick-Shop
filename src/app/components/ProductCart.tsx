@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from './Button'
 import Image from 'next/image'
+import AddProductCart from './AddProductCart'
 
 function ProductCart() {
   return (
@@ -23,15 +24,7 @@ function ProductCart() {
           </span>
         </div>
         <div>
-          <Button color='bg-amber-500' >
-            +
-          </Button>
-          <span className='mx-3'>
-            تعداد : 3 
-          </span>
-          <Button color='bg-amber-500'>
-            -
-          </Button>
+          <AddProductCart/>
         </div>
       </div>
     </div>

@@ -1,20 +1,27 @@
 "use client"
-import { createContext, useState } from "react"
-type TCartItem ={
+import { createContext, useContext, useState } from "react"
+type TCartItems ={
   id : number,
   quantity : number
 }
 type CartPageContextProps ={
   children : React.ReactNode
 }
-const CartPageContext = createContext({});
+type CartItemsContext ={
+  cartItems : TCartItems[]
+}
+const CartPageContext = createContext({} as CartItemsContext);
+
+export const useCartPageContext = ()=>{
+  return useContext(CartPageContext) 
+}
 
 function CartPageContextProvider({children} : CartPageContextProps) {
 
-  const [cart ,setcart] = useState<TCartItem[]>([])
+  const [cartItems ,setCartItems] = useState<TCartItems[]>([])
 
   return (
-    <CartPageContext.Provider value={{cart}}>
+    <CartPageContext.Provider value={{cartItems}}>
       {children}
     </CartPageContext.Provider>
   )
