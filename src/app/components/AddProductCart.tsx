@@ -1,22 +1,30 @@
 "use client"
-import Button from './Button'
 import {useCartPageContext } from './context/CartPageContext'
 
-const {} = useCartPageContext
+interface IAddToCart{
+  color ?: string
+  id : number
+}
 
+function AddProductCart( {id,color} :IAddToCart) {
 
-function AddProductCart() {
+  const {cartItems,increaseHandler,decreaseHandler} = useCartPageContext();
+  console.log(cartItems);
   return (
     <div>
-      <Button color='bg-amber-500' >
-        +
-      </Button>
+      <button onClick={()=>increaseHandler(id)} className={`${color} rounded-xl text-white text-2xl cursor-pointer`}>
+        <div className="w-12 h-12 flex items-center justify-center">
+          +
+        </div>
+      </button>
       <span className='mx-3'> 
-        تعداد : 3 
+      تعداد : 3 
       </span>
-      <Button color='bg-amber-500'>
-        -
-      </Button>
+      <button onClick={()=>decreaseHandler(id)} className={`${color} rounded-xl text-white text-2xl cursor-pointer`}>
+          <div className="w-12 h-12 flex items-center justify-center">
+            +
+          </div>
+      </button>
     </div>
   )
 }

@@ -1,9 +1,9 @@
 import React from 'react'
-import Button from './Button'
 import Image from 'next/image'
 import AddProductCart from './AddProductCart'
 
 function ProductCart() {
+
   return (
     <div className='bg-[#FAFAFA] shadow-[0px_0px_8px_2px_rgba(0,_0,_0,_0.1)] my-5 rounded-3xl grid grid-cols-12'>
       <div className='col-span-3 border-l-[1.33px] border-gray-300 flex justify-center items-center' >
@@ -24,7 +24,9 @@ function ProductCart() {
           </span>
         </div>
         <div>
-          <AddProductCart/>
+        <div>
+          {/* <AddProductCart/> */}
+        </div>
         </div>
       </div>
     </div>

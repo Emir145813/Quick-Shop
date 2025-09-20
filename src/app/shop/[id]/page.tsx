@@ -1,9 +1,7 @@
-import Button from '@/app/components/Button'
 import Container from '@/app/components/Container'
 import Image from 'next/image'
 import React from 'react'
-import { IProduct } from '../page'
-
+import AddProductCart from '@/app/components/AddProductCart'
 
 type Tprops={
   params:Promise<{id : number}>
@@ -18,7 +16,7 @@ async function ProductPage(props :Tprops) {
   const infoP = await infoPResult.json();
   return (
     <Container>
-      <div className='bg-[#FAFAFA] shadow-[0px_0px_8px_2px_rgba(0,_0,_0,_0.1)] h-[50vh] mt-20 rounded-3xl grid grid-cols-12' >
+      <div className='bg-[#FAFAFA] shadow-[0px_0px_8px_2px_rgba(0,_0,_0,_0.1)] mt-20 rounded-3xl grid grid-cols-12' >
         <div className='col-span-3 flex justify-center items-center' >
           <Image 
             src={`${infoP.image_src}`}
@@ -67,15 +65,7 @@ async function ProductPage(props :Tprops) {
             </div>
           </div>
           <div className='flex items-center justify-center h-full'>
-            <Button color={"bg-green-500"}>
-              +
-            </Button >
-            <span className='px-3 text-2xl font-sahel-semiBold py-2'>
-              500
-            </span>
-            <Button color={"bg-red-500"}>
-              -
-            </Button>
+            <AddProductCart id={id} color='bg-gradient-to-r from-orange-400 to-orange-500'/>
           </div>
         </div>
       </div>

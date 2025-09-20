@@ -13,10 +13,6 @@ function Cart() {
         </div>
         <div>
           <ProductCart/>
-          <ProductCart/>
-          <ProductCart/>
-          <ProductCart/>
-          <ProductCart/>
         </div>
         <div>
           <div>
