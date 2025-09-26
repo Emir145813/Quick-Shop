@@ -8,10 +8,11 @@ import { usePathname } from "next/navigation"
 import Quick_Shop from "../../../public/svgs/NavBar/Quick_Shop"
 import Profile_Tick from "../../../public/svgs/NavBar/Profile_Tick"
 import Shoping_Cart from "../../../public/svgs/NavBar/Shoping_Cart"
+import { useCartPageContext } from "./context/CartPageContext"
 
 
 function NavBar() {
-  
+  const {TotalProductQty} = useCartPageContext()
   const pathName =usePathname();
   
   const navItems = [
@@ -45,11 +46,16 @@ function NavBar() {
           <div className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
               <Quick_Shop/>
           </div>
-          <div className="h-full flex justify-end items-end pb-6">
+          <div className="relative h-full flex justify-end items-end pb-6">
             <ul className="flex gap-2.5 justify-left">
-              <li className="w-[47.7px] h-[47.7px] flex justify-center items-center border-[1.33px] border-[#737373] rounded-[15.91px] ">
-                <Link href='/cart'><Shoping_Cart/></Link>
-              </li>
+              <div>
+                <li className=" w-[47.7px] h-[47.7px] flex justify-center items-center border-[1.33px] border-[#737373] rounded-[15.91px] ">
+                  <Link href='/cart'><Shoping_Cart/></Link>
+                </li>
+              </div>
+              <div className={`text-sm text-white font-sahel-semiBold px-2 absolute top-5 -right-3 flex justify-center items-center rounded-3xl bg-amber-500 ${TotalProductQty == 0 ? "hidden":"inline" }`}>
+                {TotalProductQty}
+              </div>
               <li className="w-[47.px]">
                 <Link href='/'><Profile_Tick/></Link>
               </li>
@@ -58,10 +64,6 @@ function NavBar() {
         </div>
       </div>
       <hr className="w-[92%] mx-auto text-white border-[1.33px] rounded-2xl border-[#737373] h-[1.33px]" />
-
-
-      
-
     </div>
   )
 }

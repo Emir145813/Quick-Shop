@@ -2,14 +2,11 @@ import Container from '@/app/components/Container'
 import Image from 'next/image'
 import React from 'react'
 import AddProductCart from '@/app/components/AddProductCart'
-
-type Tprops={
-  params:Promise<{id : number}>
-  searchparams:Promise<{}>
-}
+import { Iprops } from '@/app/components/Interfaces';
 
 
-async function ProductPage(props :Tprops) {
+
+async function ProductPage(props :Iprops) {
 
   const {id} = await props.params;
   const infoPResult = await fetch(`http://localhost:4000/produts/${id}`);
@@ -19,7 +16,7 @@ async function ProductPage(props :Tprops) {
       <div className='bg-[#FAFAFA] shadow-[0px_0px_8px_2px_rgba(0,_0,_0,_0.1)] mt-20 rounded-3xl grid grid-cols-12' >
         <div className='col-span-3 flex justify-center items-center' >
           <Image 
-            src={`${infoP.image_src}`}
+            src={`/img/products/${infoP.image_src}`}
             alt='product image'
             width={500}
             height={500}

@@ -2,27 +2,8 @@ import React from 'react'
 import Product from '../components/Product'
 import Container from '../components/Container'
 import Link from 'next/link'
+import { IProduct } from '../components/Interfaces'
 
-export interface IProduct {
-  id ?: number ,
-  title ?: string ,
-  price ?: string | number ,
-  description ?: string ,
-  category ?: string ,
-  image_src ?: string ,
-  pclass ?: string ,
-  rating ?: {
-    rate ?: number ,
-    count ?: number
-  },
-  specs ?: {
-    spec: {
-      id : number
-      key: string,
-      value: string
-    }[]
-  }
-}
 
 async function Shop() {
 

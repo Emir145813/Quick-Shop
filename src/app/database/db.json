@@ -3,8 +3,8 @@
     {
       "id": 1,
       "title": "کفش اسپرت پسرانه بهمن",
-      "price": "415,000" ,
-      "image_src": "/img/products/image_1.png",
+      "price": 415000 ,
+      "image_src": "image_1.png",
       "specs": {
         "spec" : [
           {
@@ -29,8 +29,8 @@
     {
       "id": 2,
       "title": "کیف کلاسیک مهرخ",
-      "price": "415,000",
-      "image_src": "/img/products/image_2.png",
+      "price": 415000,
+      "image_src": "image_2.png",
       "specs": {
         "spec" : [
           {
@@ -55,8 +55,8 @@
     {
       "id": 3,
       "title": "بوت گیسو",
-      "price": "415,000",
-      "image_src": "/img/products/image_3.png",
+      "price": 415000,
+      "image_src": "image_3.png",
       "specs": {
         "spec" : [
           {
@@ -81,8 +81,8 @@
     {
       "id": 4,
       "title": "کیف دوشی گلرخ",
-      "price": "415,000",
-      "image_src": "/img/products/image_4.png",
+      "price": 415000,
+      "image_src": "image_4.png",
       "specs": {
         "spec" : [
           {
@@ -107,8 +107,8 @@
     {
       "id": 5,
       "title": "کفش مجلسی سیندرلا",
-      "price": "415,000",
-      "image_src": "/img/products/image_5.png",
+      "price": 415000,
+      "image_src": "image_5.png",
       "specs": {
         "spec" : [
           {
@@ -133,8 +133,8 @@
     {
       "id": 6,
       "title": "ست مجلسی کیف پول و دوشی مهرو",
-      "price": "415,000",
-      "image_src": "/img/products/image_6.png",
+      "price": 415000,
+      "image_src": "image_6.png",
       "specs": {
         "spec" : [
           {
@@ -159,8 +159,8 @@
     {
       "id": 7,
       "title": "کیف کلاسیک ابیرو",
-      "price": "415,000",
-      "image_src": "/img/products/image_7.png",
+      "price": 415000,
+      "image_src": "image_7.png",
       "specs": {
         "spec" : [
           {
@@ -185,8 +185,8 @@
     {
       "id": 8,
       "title": "کفش مجلسی رعنا",
-      "price": "415,000",
-      "image_src": "/img/products/image_8.png",
+      "price": 415000,
+      "image_src": "image_8.png",
       "specs": {
         "spec" : [
           {
@@ -211,8 +211,8 @@
     {
       "id": 9,
       "title": "کیف پول آتنا",
-      "price": "415,000",
-      "image_src": "/img/products/image_9.png",
+      "price": 415000,
+      "image_src": "image_9.png",
       "specs": {
         "spec" : [
           {
@@ -237,8 +237,8 @@
     {
       "id": 10,
       "title": "صندل هرمز",
-      "price": "415,000",
-      "image_src": "/img/products/image_10.png",
+      "price": 415000,
+      "image_src": "image_10.png",
       "specs": {
         "spec" : [
           {
@@ -263,8 +263,8 @@
     {
       "id": 11,
       "title": "کفش مجلسی لاله",
-      "price": "415,000",
-      "image_src": "/img/products/image_11.png",
+      "price": 415000,
+      "image_src": "image_11.png",
       "specs": {
         "spec" : [
           {
@@ -285,6 +285,23 @@
         ]
       },
       "pclass" : "کفش- مجلسی"
+    }
+  ],
+  "discount":[
+    {
+      "id":1,
+      "code" : "OFF10",
+      "perc": 10
+    },
+    {
+      "id":2,
+      "code" : "OFF20",
+      "perc": 20
+    },
+    {
+      "id":3,
+      "code" : "OFF30",
+      "perc": 30
     }
   ]
 }

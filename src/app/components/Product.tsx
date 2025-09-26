@@ -1,9 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
-import { IProduct } from '../shop/page'
 import Classification from '../../../public/svgs/Products/Classification'
 import Cart_Btn_1 from '../../../public/svgs/Products/Cart_Btn_1'
 import Cart_Btn_2 from '../../../public/svgs/Products/Cart_Btn_2'
+import { IProduct } from './Interfaces'
 
 
 function Product({image_src,title,pclass,price}: IProduct) {
@@ -11,7 +11,7 @@ function Product({image_src,title,pclass,price}: IProduct) {
     <div className='h-[543px] w-[400px] bg-white border-[1.33px] border-white rounded-[24px] p-[21px] hover:border-[1.33px] hover:border-orange-500 hover:transition hover:duration-150'>
       <div className='w-[359px] h-[302.86px] rounded-[16.66px] mb-[23.13]'>
         <Image
-          src={`${image_src}`}
+          src={`/img/products/${image_src}`}
           alt='Product Image'
           width={359}
           height={302.87}
@@ -45,7 +45,7 @@ function Product({image_src,title,pclass,price}: IProduct) {
               </button>
             </div>
             <span className='text-[24px] font-sahel-regular text-[#404040]'>
-              {price}
+              {price?.toLocaleString()}
             </span>
           </div>
       </div>

@@ -1,12 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
+import { TItems } from './Interfaces';
 
-type TItems ={
-  marginTop ?: string,
-  title : string,
-  desc : string,
-  isrc?: string
-}
+
 
 function ServiceItem({marginTop,title,desc,isrc} : TItems) {
   console.log(isrc);
