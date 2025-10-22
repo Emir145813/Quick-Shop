@@ -5,7 +5,7 @@ import { IChildren } from "./Interfaces"
 
 
 
-function Layout({ children }: IChildren) {
+function Layout({ children }: IChildren){
   return (
     <div>
       <NavBar/>    
