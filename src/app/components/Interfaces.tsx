@@ -48,3 +48,12 @@ export interface Iprops{
   params:Promise<{id : number}>
   searchparams:Promise<{}>
 }
+export interface IBannerElements{
+  title : string,
+  image : string
+}
+
+export interface ICarousel{
+  CarouselBack ?: ()=> void,
+  CarouselForward ?: ()=> void
+}
