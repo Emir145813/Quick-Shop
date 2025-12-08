@@ -3,7 +3,6 @@ import "./globals.css";
 import Layout from "./components/Layout";
 import CartPageContextProvider from "./components/context/CartPageContext";
 import { SessionProvider } from "next-auth/react";
-import { auth } from "@/auth";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,18 +14,15 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-    const session = await auth();
   return (
-    <SessionProvider session={session}>
-      <html lang="fa" dir="rtl">
-        <body>
-            <CartPageContextProvider>
-              <Layout>
-                {children}
-              </Layout>
-            </CartPageContextProvider>
-        </body>
-      </html>
-    </SessionProvider>
+    <html lang="fa" dir="rtl">
+      <body>
+          <CartPageContextProvider>
+            <Layout>
+              {children}
+            </Layout>
+          </CartPageContextProvider>
+      </body>
+    </html>
   );
 }
