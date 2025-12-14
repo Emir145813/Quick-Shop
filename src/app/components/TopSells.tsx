@@ -1,16 +1,14 @@
-import React from 'react'
 import Container from './Container'
 import TopCellsCarousel from './topSellsCarousel'
 import Image from 'next/image'
 import { Icon } from "@iconify/react";
-import { Carousel, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import Link from 'next/link';
 
 function TopSells() {
   return (
     <div className='py-[28px] my-20'>
       <Container>
-        <div className='h-[50px] flex justify-between items-center mb-6'>
+        <div className=' flex justify-between items-center mb-6'>
           <div className='flex justify-center items-center'>
             <div className='bg-gradient-to-r from-orange-400 to-orange-500 w-[36px] h-[7px] ml-[20px]'></div>
             <h1 className='font-sahel-semiBold text-[32px] text-[#404040]'>
@@ -19,8 +17,7 @@ function TopSells() {
           </div>
           <div className='flex justify-center items-center'>
             <Link href="/shop"
-            className='font-sahel-regular text-[24px] text-[#404040]'
-            >
+            className='font-sahel-regular text-[24px] text-[#404040]'>
               مشاهده همه
             </Link>
             <Link href="/shop" className='w-[33px] h-[33px] m-[7px] rounded-[8px] flex justify-center items-center bg-[#F97316]'>
@@ -28,7 +25,7 @@ function TopSells() {
             </Link>
           </div>
         </div>
-        <div className='bg-[#FAFAFA] grid grid-cols-4 rounded-3xl h-[599px]'>
+        <div className='bg-[#FAFAFA] grid grid-cols-4 rounded-3xl'>
           <div className='flex flex-col justify-start items-center px-15'>
             <div>
               <Image

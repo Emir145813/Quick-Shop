@@ -1,14 +1,22 @@
-import React from 'react'
 import Image from 'next/image'
 import Classification from '../../../public/svgs/Products/Classification'
-import Cart_Btn_1 from '../../../public/svgs/Products/Cart_Btn_1'
-import Cart_Btn_2 from '../../../public/svgs/Products/Cart_Btn_2'
 import { IProduct } from './Interfaces'
 
 
-function Product({image_src,title,pclass,price}: IProduct) {
+
+function Product({image_src,title,pclass,price,discount}: IProduct) {
+
+  function discountHandler(totalPrice :number , discount : number){
+
+    let discountPercent = Number(discount) || 0;
+    let discountMount = Number(totalPrice) * (discountPercent/100);
+    let finalPrice = Number(totalPrice) - discountMount;
+
+    return finalPrice
+  }
+
   return (
-    <div className='h-[543px] w-[400px] bg-white border-[1.33px] border-white rounded-[24px] p-[21px] hover:border-[1.33px] hover:border-orange-500 hover:transition hover:duration-150'>
+    <div className=' bg-white border-[1.33px] border-white rounded-[24px] p-[21px] hover:border-[1.33px] hover:border-orange-500 hover:transition hover:duration-150'>
       <div className='w-[359px] h-[302.86px] rounded-[16.66px] mb-[23.13]'>
         <Image
           src={`/img/products/${image_src}`}
@@ -21,33 +29,51 @@ function Product({image_src,title,pclass,price}: IProduct) {
         <p className='font-sahel-semiBold text-[24px] text-[#404040] mb-[24px]'>
           {title}
         </p>
-        <div className='flex mb-[29.5px]'>
-          <div className='ml-[7.02px] text-[22px] flex items-center justify-center'>
+        <div className='flex mb-[29.5px] flex-row justify-start'>
+          <div className='ml-[7.02px] text-[22px] flex items-center justify-center '>
             <Classification/>
           </div>
-          <div>
+          <div className='flex justify-start'>
             <p className='font-sahel-regular text-[#737373] text-[22px]'>
               {pclass}
             </p>
           </div>
         </div>
-          <div className='h-[51.50px] flex justify-between items-start'>
-            <div className='w-[93px] h-[51px] bg-gradient-to-r from-orange-400 to-orange-500 rounded-[16px] flex justify-center items-center'>
-              <button>
-                <div className='flex gap-2'>
-                  <div className='flex justify-center items-center'>
-                    <Cart_Btn_2/>
-                  </div>
-                  <div className='flex justify-center items-center'>
-                    <Cart_Btn_1/>
-                  </div>
-                  </div>
-              </button>
-            </div>
-            <span className='text-[24px] font-sahel-regular text-[#404040]'>
-              {price?.toLocaleString()}
-            </span>
+        <div className=' flex justify-start '>
+          <div className='text-[24px] font-sahel-regular text-[#404040] flex flex-col-reverse'>
+            {
+              discount?
+              <div className='flex flex-col-reverse'>
+                <div className='flex flex-row-reverse gap-2'>
+                  <span>
+                    تومان
+                  </span>
+                  <span>
+                    {
+                      discountHandler(Number(price),Number(discount)).toLocaleString()
+                    }
+                  </span>
+                </div>
+                <span className='line-through text-gray-400'>
+                  {
+                    price?.toLocaleString()
+                  }
+                </span>
+              </div>
+              :
+              <div className='space-x-2 h-[72px] flex items-end'>
+                <span>
+                  {
+                    price?.toLocaleString()
+                  }
+                </span>
+                <span>
+                  تومان
+                </span>
+              </div>
+            }
           </div>
+        </div>
       </div>
     </div>
   )

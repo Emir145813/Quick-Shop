@@ -1,40 +1,46 @@
 "use client"
-import React, { useEffect, useState } from 'react'
 import Container from '../components/Container'
 import ProductCart from '../components/ProductCart'
 import { useCartPageContext } from '../components/context/CartPageContext'
-import axios from 'axios'
-import { IProduct } from '../components/Interfaces'
+import { IDiscount, IProduct } from '../components/Interfaces'
+import axios from "axios"
+import { useEffect, useState } from 'react'
 
 function Cart() {
 
   const {cartItems} = useCartPageContext();
-  const [data, setData] = useState<IProduct[]>([])
-  const [discountValidation,setdiscountValidation] = useState('')
-  const [finalPrice, setFinalPrice] = useState(0)
-  const [discountMount , setDiscountMount] = useState(0)
+  const [data, setData] = useState<IProduct[]>([]);
+  const [discounts , setDiscounts] = useState<IDiscount>();
+  const [discountValidation,setdiscountValidation] = useState('');
+  const [finalPrice, setFinalPrice] = useState(0);
+  const [discountMount , setDiscountMount] = useState(0);
+
+  useEffect(()=>{
+    axios("http://localhost:3000/api/products")
+      .then((response) => {const {data} = response
+      setData(data)
+    })
+  },[])
 
   let totalPrice = 
       cartItems.reduce((totalPrice,items)=>{
       let porchasedProducts = data.find((product)=>product.id == items.id) 
       return totalPrice + (porchasedProducts?.price || 0) * items.quantity
-    },0)
+    },0);
 
   const discountHandler = ()=>{
-    axios(`http://localhost:4000/discount?code=${discountValidation}`)
-      .then((response)=>{ const data = response.data
-      let discountMount = data[0].perc || 0
-      let discount = totalPrice * (discountMount/100)
-      setFinalPrice(totalPrice - discount)
-      setDiscountMount(discount)
+    axios(`http://localhost:3000/api/discounts`)
+      .then((response) => {const data = response.data
+      const selected = data.find((item : IDiscount)=> item.code == discountValidation);
+      setDiscounts(selected);
+      let discountMount = discounts?.perc || 0;
+      let discount = totalPrice * (discountMount/100);
+      setFinalPrice(totalPrice - discount);
+      setDiscountMount(discount);
+      console.log(discounts);
     })
   }
-  useEffect(()=>{
-    axios("http://localhost:4000/produts/")
-      .then((response) =>{const {data} = response
-      setData(data)
-    })
-  },[])
+
   return (
     <div>
       <Container> 

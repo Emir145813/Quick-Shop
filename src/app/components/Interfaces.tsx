@@ -1,22 +1,41 @@
+// export interface IProduct {
+//   id ?: string ,
+//   title ?: string ,
+//   price ?:  number ,
+//   description ?: string ,
+//   category ?: string ,
+//   image_src ?: string ,
+//   pclass ?: string ,
+//   rating ?: {
+//     rate ?: number ,
+//     count ?: number
+//   },
+//   specs ?: {
+//     spec: {
+//       id : number
+//       key: string,
+//       value: string
+//     }[]
+//   }
+// }
+
 export interface IProduct {
-  id ?: number ,
+  _id ?: string ,
+  id ?: number,
+  pid ?: number,
   title ?: string ,
   price ?:  number ,
+  discount ?: number,
   description ?: string ,
   category ?: string ,
   image_src ?: string ,
   pclass ?: string ,
-  rating ?: {
-    rate ?: number ,
-    count ?: number
-  },
-  specs ?: {
-    spec: {
-      id : number
-      key: string,
-      value: string
-    }[]
-  }
+}
+
+export interface IDiscount{
+  id ?: number,
+  code ?: string,
+  perc ?: number
 }
 
 export interface TCartItems {
@@ -46,8 +65,14 @@ export interface TItems {
 
 export interface Iprops{
   params:Promise<{id : number}>
-  searchparams:Promise<{}>
+  searchParams:Promise<{}>
 }
+
+export interface ISearchParams{
+  params :Promise<{}>
+  searchParams : Promise<{page : string}>
+}
+
 export interface IBannerElements{
   title : string,
   image : string
