@@ -59,7 +59,9 @@ async function ProductPage(props :Iprops) {
           <div className='h-full grid grid-rows-2'>
             <div className='flex justify-center items-end'>
               <span className='p-5 font-sahel-semiBold text-3xl'>
-                {PInfo.price}
+                {
+                  PInfo.price?.toLocaleString()
+                }
               </span>
             </div>
             <div className='font-sahel-semiBold text-3xl flex justify-center'>
