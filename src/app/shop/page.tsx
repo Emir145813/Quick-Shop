@@ -26,7 +26,7 @@ async function Shop({searchParams} : ISearchParams) {
   
   const totalPage = Math.ceil(PInfo.productCount / 8);
   const nextPage = page == totalPage ? page : page + 1
-  const pervPage = page > 0 ? page -1 : 1
+  const pervPage = page > 1 ? page -1 : 1
 
 
   const pageNumbers = [];
