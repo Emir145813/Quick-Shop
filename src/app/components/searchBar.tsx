@@ -1,17 +1,23 @@
 "use client"
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 
 import { useState } from 'react'
 
 
 function SearchBar() {
 
+  const searchParams = useSearchParams();
   const router = useRouter();
   const [search , useSearch] = useState(``);
+
+  
   const submitHandle =()=>{
-    router.push(`/shop?title=${search}`)
+
+    const currentParam = new URLSearchParams(searchParams.toString());
+    currentParam.set("title", search);
+    router.push(`/shop?${currentParam}`)
   }
 
   return (
