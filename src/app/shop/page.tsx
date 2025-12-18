@@ -19,16 +19,15 @@ import getData from '../components/getData'
 
 async function Shop({searchParams} : ISearchParams) {
 
-  let page = parseInt((await searchParams).page) ?? 1
-  page = !page || page < 1 ? 1 : page
-  const perPage = 8
-  const PInfo = await getData(page , perPage)
-  
+  const productTitle = (await searchParams).title;
+  console.log(productTitle);
+  let page = parseInt((await searchParams).page) ?? 1;
+  page = !page || page < 1 ? 1 : page;
+  const perPage = 8;
+  const PInfo = await getData(page , perPage ,productTitle);
   const totalPage = Math.ceil(PInfo.productCount / 8);
-  const nextPage = page == totalPage ? page : page + 1
-  const pervPage = page > 1 ? page -1 : 1
-
-
+  const nextPage = page == totalPage ? page : page + 1;
+  const pervPage = page > 1 ? page -1 : 1;
   const pageNumbers = [];
   const offsetNumber = 3;
   for( let i = page - offsetNumber ;i <= page ; i++){

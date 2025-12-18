@@ -5,6 +5,7 @@ import NavBarCartCounter from "./NavBarCartCounter"
 import NavItems from "./NavItems"
 import NavBarContainer from "./NavBarContainer"
 import Profile_Tick from "../../../public/svgs/NavBar/Profile_Tick"
+import SearchBar from "./searchBar"
 
 
 function NavBar() {
@@ -18,19 +19,18 @@ function NavBar() {
               <Quick_Shop/>
           </div>
           <div className="relative h-full flex justify-end items-end pb-6">
-            <ul className="flex gap-2.5 justify-left">
-              <div>
-                <li className=" w-[47.7px] h-[47.7px] flex justify-center items-center border-[1.33px] border-[#737373] rounded-[15.91px] hover:border-[#F97316]">
-                  <Link href='/cart'><Shoping_Cart/></Link>
+            <ul className="flex gap-2.5 justify-left ">
+              <li>
+                <SearchBar/>
+              </li>
+              <li className=" w-[47.7px] h-[47.7px] flex justify-center items-center border-[1.33px] border-[#737373] rounded-[15.91px] hover:border-[#F97316]">
+                <Link href='/cart'><Shoping_Cart/></Link>
+              </li>
+              <NavBarCartCounter/>
+              <div className="w-[47.px]">
+                <li>
+                  <Link href='/signin'><Profile_Tick/></Link>
                 </li>
-              </div>
-              <div>
-                <NavBarCartCounter/>
-                <div>
-                  <li className="w-[47.px]">
-                    <Link href='/signin'><Profile_Tick/></Link>
-                  </li>
-                </div>
               </div>
             </ul>
           </div>

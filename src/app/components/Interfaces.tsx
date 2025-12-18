@@ -70,7 +70,7 @@ export interface Iprops{
 
 export interface ISearchParams{
   params :Promise<{}>
-  searchParams : Promise<{page : string}>
+  searchParams : Promise<{page : string , title : string}>
 }
 
 export interface IBannerElements{
