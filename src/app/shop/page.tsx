@@ -21,9 +21,9 @@ async function Shop({searchParams} : ISearchParams) {
   const productTitle = (await searchParams).title;
   let page = parseInt((await searchParams).page) ?? 1;
   page = !page || page < 1 ? 1 : page;
-  const perPage = 4;
+  const perPage = 8;
   const PInfo = await getData(page , perPage ,productTitle);
-  const totalPage = Math.ceil(PInfo.productCount / 4);
+  const totalPage = Math.ceil(PInfo.productCount / 8);
   const nextPage = page == totalPage ? page : page + 1;
   const pervPage = page > 1 ? page -1 : 1;
   const pageNumbers = [];
@@ -47,17 +47,17 @@ async function Shop({searchParams} : ISearchParams) {
         <Pagination>
           <PaginationContent>
             <PaginationItem>
-              <PaginationPrevious href={`?page=${pervPage}`} />
+              <PaginationPrevious href={`?page=${pervPage}&title=${productTitle}`} />
             </PaginationItem>
             {
               pageNumbers.map((pageNumber , index)=>(
                 <PaginationItem key={index}>
-                  <PaginationLink href={`?page=${pageNumber}`}>{pageNumber}</PaginationLink>
+                  <PaginationLink href={`?page=${pageNumber}&title=${productTitle}`}>{pageNumber}</PaginationLink>
                 </PaginationItem>
               ))
             }
             <PaginationItem>
-              <PaginationNext href={`?page=${nextPage}`} />
+              <PaginationNext href={`?page=${nextPage}&title=${productTitle}`} />
             </PaginationItem>
           </PaginationContent>
         </Pagination>

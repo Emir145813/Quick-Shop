@@ -17,7 +17,7 @@ function SearchBar() {
 
     const currentParam = new URLSearchParams(searchParams.toString());
     currentParam.set("title", search);
-    router.push(`/shop?${currentParam}`)
+    router.push(`/shop?${currentParam.toString()}`)
   }
 
   return (
