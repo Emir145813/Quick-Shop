@@ -19,7 +19,7 @@ function BannerSample({title,image} : IBannerElements) {
           alt='Rectangle'
           width={487.72015380859375}
           height={117.72035217285156}
-          className='absolute -bottom-[0.5px] left-0'
+          className='absolute -bottom-[1px] left-0'
         />
         <div className=' h-[260px] absolute top-0 flex flex-col justify-center pr-7'>
           <h1 className='text-3xl font-sahel-bold text-white leading-[41.69px] mb-[11.17px]'>
@@ -44,7 +44,7 @@ function BannerSample({title,image} : IBannerElements) {
           alt='men logo'
           width={458.5403137207031}
           height={322.6922607421875}
-          className='absolute left-0 -top-[20.98px]'
+          className='absolute left-0 -top-[20px]'
         />
       </div>
     </Link>

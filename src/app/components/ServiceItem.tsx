@@ -1,12 +1,10 @@
-import React from 'react'
 import Image from 'next/image'
 import { TItems } from './Interfaces';
 
 
 
 function ServiceItem({marginTop,title,desc,isrc} : TItems) {
-  console.log(isrc);
-  
+
   return (
     <div className={`w-[235px] h-[219.11px] ${marginTop}`}>
       <div className='h-full w-full'>
