@@ -24,9 +24,10 @@ function SearchBar() {
   return (
     <div className='h-[47.7px] flex flex-row-reverse gap-2.5'>
       <Input onChange={(e)=>{useSearch(e.target.value)}} className='h-full rounded-[15.91px] border-[1.33px] border-[#737373] text-lg text-white hover:border-[#F97316] active:border-[#F97316] placeholder:text-white' placeholder='جستجو محصول' type='text'/>
-      <Button onClick={submitHandle} className=' rounded-[15.91px] bg-orange-500'>
-        <Icon style={{ fontSize: '28px' }} className='bg-amber-100' icon="oui:ws-search" height="47.7" width="8.7"/>
+      <Button onClick={submitHandle} className=' rounded-[15.91px] bg-transparent border-[1.33px] border-[#737373] h-[47.7px] w-[47.7px] flex justify-center items-center hover:bg-transparent hover:border-orange-500'>
+        <Icon style={{ fontSize: '47.7px' , height : "30.7px", width: "30.7" }} icon="solar:card-search-line-duotone"/>
       </Button>
+      
     </div>
   )
 }
