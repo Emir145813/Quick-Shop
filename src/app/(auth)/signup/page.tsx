@@ -23,7 +23,7 @@ function Signup() {
     }
   })
 
-  const handleSumbit = (data: z.infer<typeof signupSchema>) => {
+  const handleSubmit = (data: z.infer<typeof signupSchema>) => {
   startTransition(() => {
     const formData = new FormData();
     Object.entries(data).forEach(([key, value]) => {
@@ -46,7 +46,7 @@ function Signup() {
     <div className='h-screen flex justify-center items-center font-sahel-semiBold text-[16px] '>
       <div className='w-1/5  bg-[#FAFAFA] rounded-3xl px-6 py-10 '>
         <Form {...form}>
-          <form action={formAction} onSubmit={form.handleSubmit(handleSumbit)} className="space-y-8 flex flex-col">
+          <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-8 flex flex-col">
             <FormField
               control={form.control}
               name="email"
